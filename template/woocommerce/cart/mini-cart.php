@@ -38,10 +38,10 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 				$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 				?>
 				<li class="woocommerce-mini-cart-item <?php echo esc_attr( apply_filters( 'woocommerce_mini_cart_item_class', 'mini_cart_item', $cart_item, $cart_item_key ) ); ?>">
-					<div class="coral-minicart-product-thumb">
+					<div class="wfc-minicart-product-thumb">
 						<?php echo $thumbnail; ?>
 					</div>
-					<div class="coral-minicart-product-name">
+					<div class="wfc-minicart-product-name">
 						<?php if ( empty( $product_permalink ) ) : ?>
 							<?php echo '<h3>'.wp_kses_post( $product_name ).'</h3>'; ?>
 						<?php else : ?>
@@ -49,7 +49,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 						<?php endif; ?>
 						<div class="minicart-product-quantity"><?php echo wc_get_formatted_cart_item_data( $cart_item );  ?><?php echo $cart_item['quantity']; ?></div>
 					</div>
-					<div class="coral-minicart-product-price">
+					<div class="wfc-minicart-product-price">
 						<div class="minicart-product-price"><?php echo $product_price; ?></div>
 						<?php
 						echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -78,7 +78,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 	<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 
 	<!-- <p class="woocommerce-mini-cart__buttons buttons"><?php //do_action( 'woocommerce_widget_shopping_cart_buttons' ); ?></p> -->
-	<div class="coral-minicart-checkout-button">
+	<div class="wfc-minicart-checkout-button">
 		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="checkout-button alt wc-forward">
 			<span><?php esc_html_e( 'Checkout', 'woocommerce' ); ?> - <?php wc_cart_totals_order_total_html(); ?></span> <span class="checkout-button-arrow">&rarr;</span>
 		</a>

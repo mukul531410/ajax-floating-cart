@@ -144,7 +144,7 @@ MINI CART STYLES
     flex-flow: wrap row;
     gap: 20px;
     align-items: center;
-    padding: 8px 0 0;
+    padding: 8px 0;
 }
 .wfc-busket-content .woocommerce-mini-cart .mini_cart_item::after,
 .wfc-busket-content .woocommerce-mini-cart .mini_cart_item::before {
@@ -204,4 +204,14 @@ MINI CART STYLES
     visibility: visible;
     opacity: 1;
     width: auto;
+}
+.wfc-busket-content .woocommerce-mini-cart__empty-message {
+    padding: 15px;
+    margin: 0;
+}
+.wfc-busket-content .product_list_widget li img {
+    max-width: 100%;
+}
+.wfc-busket-content .wc-forward::after, .wfc-busket-content .woocommerce-Button--next::after {
+    display: none;
 }

@@ -70,43 +70,33 @@
 	    // Enqueued script with localized data.
 	    wp_enqueue_script( 'wfc-main' );
 	}
-	
-    // 	WOOCOMMERCE TEMPLATE FILES LOAD
-	public function WFC_woocommerce_template_files_loader_function( $templates, $template_name ){
-		// Capture/cache the $template_name which is a file name like single-product.php
-		wp_cache_set( 'WFC_wc_main_template', $template_name );
-		return $templates;
-	}
 
-	// WOOCOMMERCE TEMPLATE FILE INCLUDE
-	public function WFC_wc_template_include( $template ){
-		if ( $template_name = wp_cache_get( 'WFC_wc_main_template' ) ) {
-			wp_cache_delete( 'WFC_wc_main_template' ); // delete the cache
-			if ( $file = untrailingslashit( WFC_DIR )  . '/template/woocommerce/'. $template_name ) {
-				return $file;
-			}
-		}
-		return $template;
-	}
-
-	// WOOCOMMERCE GET TEMPLATE PART
-	public function WFC_wc_get_template_part( $template, $slug, $name ){
-		$file = untrailingslashit( WFC_DIR )  . '/template/woocommerce/'. $slug . '-'. $name .'.php';
-		return $file ? $file : $template;
-	}
-
-	// WOOCMMERCE GET TEMPLATE
-	public function WFC_wc_get_template_function( $template, $template_name ) {
-		$file = untrailingslashit( WFC_DIR )  . '/template/woocommerce/'. $template_name;
-		return $file ? $file : $template;
-	}
-
-	// WOOCOMMERCE TEMPLATE FILE LOCATE
-	public function WFC_wc_locate_template( $template, $template_name ){
-		$file = untrailingslashit( WFC_DIR )  . '/template/woocommerce/'. $template_name;
-		$file = $file ? $file : $template;
-		return $file;
-	}
+    // WOOCOMMERCE TEMPLATE LOCATE
+    public function WFC_wc_template_load($template, $template_name, $template_path){
+        global $woocommerce;
+        $_template = $template;
+        if ( ! $template_path ) $template_path = $woocommerce->template_url;
+        $plugin_path  = untrailingslashit( WFC_DIR )  . '/template/woocommerce/';
+      
+        // Look within passed path within the theme - this is priority
+        $template = locate_template(
+          array(
+            $template_path . $template_name,
+            $template_name
+          )
+        );
+      
+        // Modification: Get the template from this plugin, if it exists
+        if ( ! $template && file_exists( $plugin_path . $template_name ) )
+          $template = $plugin_path . $template_name;
+      
+        // Use default template
+        if ( ! $template )
+          $template = $_template;
+      
+        // Return what we found
+        return $template;
+    }
 
 	// FLOATING CART HTML FOOTER
 	public function WFC_floating_cart_init() {

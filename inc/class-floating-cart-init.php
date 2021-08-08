@@ -82,11 +82,7 @@ class WFC_features_init {
 		$plugin_admin = new WFC_admin( $this->get_plugin_name(), $this->get_version() );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_admin, 'WFC_frontend_enqueue_styles' );
 		$this->loader->add_action( 'wp_footer', $plugin_admin, 'WFC_floating_cart_init');
-		$this->loader->add_filter( 'woocommerce_template_loader_files', $plugin_admin, 'WFC_woocommerce_template_files_loader_function', 10, 2 );
-		$this->loader->add_filter( 'template_include', $plugin_admin, 'WFC_wc_template_include', 11 );
-		$this->loader->add_filter( 'wc_get_template_part', $plugin_admin, 'WFC_wc_get_template_part', 10, 3 );
-		$this->loader->add_filter( 'wc_get_template', $plugin_admin, 'WFC_wc_get_template_function', 10, 2 );
-		$this->loader->add_filter( 'wc_locate_template', $plugin_admin, 'WFC_wc_locate_template', 10, 2 );
+		$this->loader->add_filter( 'woocommerce_locate_template', $plugin_admin, 'WFC_wc_template_load', 10, 3 );
 	}
 
 	/**
