@@ -1,1 +1,1 @@
-# woocommerce-floating-cart
+# ajax-floating-cart

@@ -1,7 +1,7 @@
-=== Ajax Floating Cart Woocommerce ===
+=== Ajax Floating Cart ===
 Contributors: ashad531410
 Donate link: https://www.paypal.com/paypalme/mukulashad
-Tags: Ajax Floating Cart Woocommerce, Woocommerce, Floating Cart, Ajax Cart, Woocommerce Cart
+Tags: Ajax Floating Cart, Woocommerce, Floating Cart, Ajax Cart, Woocommerce Cart
 Requires at least: 5.0
 Tested up to: 5.8
 Requires PHP: 7.3
@@ -9,17 +9,17 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Ajax Floating Cart Woocommerce is a free plugin for woocommerce ajax cart.
+Ajax Floating Cart is a free plugin for woocommerce ajax cart.
 
 == Description ==
 
-Ajax Floating Cart Woocommerce ajax cart for woocommerce with beautifull design. It's show product quantity with sub total of price and total payable amount with checkout button.
+Ajax Floating Cart ajax cart for woocommerce with beautifull design. It's show product quantity with sub total of price and total payable amount with checkout button.
 
-= WHY Ajax Floating Cart Woocommerce? =
+= WHY Ajax Floating Cart? =
 
 
 = FEATURES =
-Ajax Floating Cart Woocommerce offer:
+Ajax Floating Cart offer:
 	1. Direct checkout page
 	2. Remove product from cart without page load
 	3. Product show with product link
@@ -27,7 +27,7 @@ Ajax Floating Cart Woocommerce offer:
 	5. Total payable amount with checkout button
 	
 
-= BENEFITS OF Ajax Floating Cart Woocommerce =
+= BENEFITS OF Ajax Floating Cart =
 Show all cart products everywhere of the website.
 Product can add or remove without page load.
 Just download and active from WordPress plugin archive and ready to use.
