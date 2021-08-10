@@ -163,7 +163,7 @@ MINI CART STYLES
     margin: 0;
 }
 .wfc-minicart-product-name {
-    width: calc(100% - 260px);
+    width: calc(100% - 210px);
     font-weight: 700;
 }
 .wfc-minicart-product-price {
