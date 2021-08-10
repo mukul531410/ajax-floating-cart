@@ -5,11 +5,11 @@
 
 /**
  * For more information, see the following discussion:
- * https://github.com/mukul531410/woocommerce-floating-cart
+ * https://github.com/mukul531410/ajax-floating-cart-woocommerce
  *
- * @link       https://wordpress.org/plugins/woocommerce-floating-cart
+ * @link       https://wordpress.org/plugins/ajax-floating-cart-woocommerce
  * @since      1.0.0
- * @package    woocommerce-floating-cart
+ * @package    ajax-floating-cart-woocommerce
  * @author     Ashaduzzaman Mukul <mukul.ashad@gmail.com>
  */
 

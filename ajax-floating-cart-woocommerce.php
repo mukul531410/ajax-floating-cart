@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       Woocommerce Floating Cart
- * Plugin URI:        https://wordpress.org/plugins/woocommerce-floating-cart
+ * Plugin Name:       Ajax Floating Cart Woocommerce
+ * Plugin URI:        https://wordpress.org/plugins/ajax-floating-cart-woocommerce
  * Description:       A plugin for WordPress Woocommerce
  * Version:           1.0.0
  * Requires at least: 5.0
@@ -40,10 +40,10 @@ if ( !class_exists( 'WooCommerce' ) ):
     function WFC_required_woocommerce_plugin(){
     ?>
     <div class="notice notice-error" >
-        <p>Please Enable Woocommerce Plugin before using Woocommerce Floating Cart Plugin</p>
+        <p>Please Enable Woocommerce Plugin before using Ajax Floating Cart Woocommerce Plugin</p>
     </div>
     <?php
-     @trigger_error(__('Please active Woocommerce before using Woocommerce Floating Cart Plugin.', 'floating-cart'), E_USER_ERROR);
+     @trigger_error(__('Please active Woocommerce before using Ajax Floating Cart Woocommerce Plugin.', 'floating-cart'), E_USER_ERROR);
     }
     add_action('network_admin_notices', 'WFC_required_woocommerce_plugin');
     register_activation_hook(__FILE__, 'WFC_required_woocommerce_plugin');

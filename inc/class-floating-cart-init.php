@@ -2,10 +2,10 @@
 /**
  * Fired during plugin core functions
  *
- * @link       https://wordpress.org/plugins/woocommerce-floating-cart
+ * @link       https://wordpress.org/plugins/ajax-floating-cart-woocommerce
  * @since      1.0.0
- * @package    woocommerce-floating-cart
- * @subpackage woocommerce-floating-cart/inc
+ * @package    ajax-floating-cart-woocommerce
+ * @subpackage ajax-floating-cart-woocommerce/inc
  */
 
 /**
@@ -14,8 +14,8 @@
  * This class defines all code necessary to run during the plugin's features.
  *
  * @since      1.0.0
- * @package    woocommerce-floating-cart
- * @subpackage woocommerce-floating-cart/inc
+ * @package    ajax-floating-cart-woocommerce
+ * @subpackage ajax-floating-cart-woocommerce/inc
  * @author     Ashaduzzaman Mukul <mukul.ashad@gmail.com>
  */
  
@@ -30,7 +30,7 @@ class WFC_features_init {
 		} else {
 			$this->plugin_version = '1.0.0';
 		}
-		$this->plugin_name = 'woocommerce-floating-cart';
+		$this->plugin_name = 'ajax-floating-cart-woocommerce';
 		$this->load_dependencies();
 		$this->define_admin_hooks();
 		$this->define_woocommerce_hooks();
