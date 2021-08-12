@@ -50,7 +50,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 						<div class="minicart-product-quantity">
 							<div class="minicart-product-qty"><?php echo wc_get_formatted_cart_item_data( $cart_item );  ?><?php echo $cart_item['quantity']; ?></div>
 							<span>x</span>
-							<div class="minicart-product-price"><?php echo $product_price; ?></div>
+							<div class="minicart-product-price"><?php echo wp_kses_post($product_price); ?></div>
 						</div>
 					</div>
 					<div class="wfc-minicart-product-price">

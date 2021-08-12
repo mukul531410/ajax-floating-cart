@@ -107,7 +107,7 @@
     <div class="wfc-minicart-wrapper">
 	    <div class="wfc-cart-link">
 	        <a class="wfc-mini-cart" href="#" title="<?php _e('View your shopping cart', 'WFC'); ?>">
-	            <img src="<?php echo WFC_URL; ?>assets/img/shopping-cart.png" alt="shopping-cart.png"/> <span><?php echo $amount[0]; ?></span>
+	            <img src="<?php echo WFC_URL; ?>assets/img/shopping-cart.png" alt="shopping-cart.png"/> <span><?php echo esc_html($amount[0]); ?></span>
 	        </a>
 	    </div>
 	    <div class="wfc-mini-cart-wrapper">
